@@ -3424,7 +3424,6 @@ PHP_FUNCTION(date_timestamp_get)
 	}
 	dateobj = Z_PHPDATE_P(object);
 	DATE_CHECK_INITIALIZED(dateobj->time, DateTime);
-	timelib_update_ts(dateobj->time, NULL);
 
 	timestamp = timelib_date_to_int(dateobj->time, &error);
 	if (error) {
